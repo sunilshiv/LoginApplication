@@ -54,6 +54,13 @@ dependencies {
     // To use Kotlin Symbol Processing (KSP)
    // ksp "androidx.room:room-compiler:$room_version"
 
+    //Datastore
+    implementation("androidx.datastore:datastore-preferences:$datastore_version")
+    implementation("androidx.datastore:datastore-preferences-core:$datastore_version")
+
+    //Timber logging library
+    implementation("com.jakewharton.timber:timber:$timber_log_version")
+
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$androidx_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$expresso_version"

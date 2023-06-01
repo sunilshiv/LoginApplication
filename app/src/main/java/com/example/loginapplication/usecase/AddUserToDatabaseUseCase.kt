@@ -9,7 +9,7 @@ class AddUserToDatabaseUseCase @Inject constructor(
     private val dao: UserDao
 ) {
 
-    operator fun invoke(userDto: UserDto) {
+    suspend operator fun invoke(userDto: UserDto) {
         Timber.d("invoke!")
         dao.insert(userDto)
     }

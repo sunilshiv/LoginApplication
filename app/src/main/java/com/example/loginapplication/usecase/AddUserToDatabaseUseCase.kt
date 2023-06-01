@@ -5,11 +5,13 @@ import com.example.loginapplication.model.dto.UserDto
 import timber.log.Timber
 import javax.inject.Inject
 
-class GetUserByEmailUseCase @Inject constructor(
-    private val userDao: UserDao
+class AddUserToDatabaseUseCase @Inject constructor(
+    private val dao: UserDao
 ) {
-    operator fun invoke(email: String): UserDto{
-        Timber.d("invoke:$email")
-        return userDao.findByEmail(email)
+
+    operator fun invoke(userDto: UserDto) {
+        Timber.d("invoke!")
+        dao.insert(userDto)
     }
+
 }

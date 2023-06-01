@@ -43,6 +43,7 @@ dependencies {
 
     //Hilt
     implementation "com.google.dagger:hilt-android:2.44"
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     kapt "com.google.dagger:hilt-compiler:2.44"
 
     //Room Database
@@ -50,9 +51,13 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
     // To use Kotlin annotation processing tool (kapt)
+    implementation("androidx.room:room-ktx:$room_version")
     kapt "androidx.room:room-compiler:$room_version"
     // To use Kotlin Symbol Processing (KSP)
    // ksp "androidx.room:room-compiler:$room_version"
+
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
 
     //Datastore
     implementation("androidx.datastore:datastore-preferences:$datastore_version")

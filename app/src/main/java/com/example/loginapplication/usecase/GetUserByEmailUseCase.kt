@@ -8,7 +8,7 @@ import javax.inject.Inject
 class GetUserByEmailUseCase @Inject constructor(
     private val userDao: UserDao
 ) {
-    operator fun invoke(email: String): UserDto{
+    suspend operator fun invoke(email: String): UserDto{
         Timber.d("invoke:$email")
         return userDao.findByEmail(email)
     }

@@ -63,6 +63,10 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:$datastore_version")
     implementation("androidx.datastore:datastore-preferences-core:$datastore_version")
 
+    //Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+
     //Timber logging library
     implementation("com.jakewharton.timber:timber:$timber_log_version")
 

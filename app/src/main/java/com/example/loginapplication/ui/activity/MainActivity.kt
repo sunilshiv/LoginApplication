@@ -1,8 +1,9 @@
-package com.example.loginapplication
+package com.example.loginapplication.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
+import com.example.loginapplication.R
 import com.example.loginapplication.usecase.LoginUserUseCase
 import com.example.loginapplication.usecase.RegisterUserUseCase
 import dagger.hilt.android.AndroidEntryPoint

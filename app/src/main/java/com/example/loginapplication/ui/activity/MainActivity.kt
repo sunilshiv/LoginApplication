@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
     @Inject
     lateinit var registerUserUseCase: RegisterUserUseCase
     @Inject
@@ -19,12 +19,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        /*setContentView(R.layout.activity_main)
         val email = "sunil.d.s@gmail.com"
         val password = "pass123"
         lifecycleScope.launch {
            // registerUserUseCase.invoke(email, password)
             loginUserUseCase.invoke(email, password)
-        }
+        }*/
     }
 }
